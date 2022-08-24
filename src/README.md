@@ -1,4 +1,4 @@
-# Modules
+# src
 
 > Check out the [documentation about the folder structure - unlyed](https://unlyed.github.io/next-right-now/reference/folder-structure)
 
@@ -7,9 +7,10 @@ src
 ├── README.md
 ├── common
 │ ├── components
+│ ├── helpers
 │ ├── hooks
 │ ├── styles
-│ └── utils
+│ └── utils.ts
 ├── layouts
 │ ├── Home
 │ └── common
