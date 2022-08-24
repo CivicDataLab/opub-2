@@ -15,15 +15,19 @@
     "strict": true,
     "target": "es5",
     "noImplicitAny": false,
+    "isolatedModules": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "incremental": true,
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/common/components/*"],
+      "@helpers/*": ["src/common/helpers/*"],
+      "@hooks/*": ["src/common/hooks/*"],
       "@styles/*": ["src/common/styles/*"],
       "@modules/*": ["src/modules/*"],
-      "@content/*": ["src/content/*"]
+      "@layouts/*": ["src/layouts/*"],
+      "@utils": ["src/common/utils.ts"]
     }
   },
   "exclude": ["node_modules", "pages"],
