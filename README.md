@@ -1,10 +1,5 @@
 <h1 align="center">OPub</h1>
-<!-- <h2 align="center">Part of the <a href="https://openbudgetsindia.org/">Open Budgets India</a> Project</h2> -->
-<!-- <br/> -->
 <p align="center">
-<!-- <img alt="" src="https://github.com/CivicDataLab/opub/raw/constituency/public/assets/images/readme.png"  /> -->
-<!-- <br/>
-<br/> -->
 <a href="https://github.com/CivicDataLab/opub/blob/main/LICENSE">
 <img alt="MIT License" src="https://img.shields.io/apm/l/atomic-design-ui.svg?"/>
 </a>&nbsp;&nbsp; 
@@ -33,10 +28,10 @@
 
 - ♿ Accessible: The platform is screen-reader friendly and keyboard accessible.
 - 👩‍💻 Developer friendly: built with NextJS, CSS-in-JS, and REST API to make the developer experience a treat.
-- 🚀 Styled-components: CSS-in-JS to get styling on steroids with fantastic developer experience.
+- 🚀 StitchesJs: CSS-in-JS to get styling on steroids with fantastic developer experience.
 - 📋 Typescript: Developed using typescript to improve development experience by catching errors and providing fixes.
 - 🧱 Extensible: quickly extend and develop/import your own React components
-- 📝 Well documented: complete set of documentation plus the documentation of NextJS and CKAN
+- 📝 Well documented: complete set of documentation plus the documentation of NextJS
 
 ## Getting Started
 
@@ -48,43 +43,39 @@
 
 ### Styling
 
-This project uses [styled-components]('https://github.com/styled-components/styled-components') to handle all of the stylings. It provides lots of features to improve the developer experience.
+This project uses [Stitchesjs](https://github.com/stitchesjs/stitches) to handle all of the stylings. It provides lots of features to improve the developer experience.
 
-Pages and most component styles are available in the same file, although some components have a separate file, e.g.: `ButtonComp.ts.`
-
-To make the styling scalable, we use a `theme.ts` file in the `/config` directory. It contains all the colors and gradients from the Design System.
+To make the styling scalable, we use a `stitches.config.ts` file in the root directory. It contains all the colors and gradients, etc from the Design System.
 
 ### Backend
 
-The project requires a CKAN URL to fetch datasets. You can save them in the `.env.local` file in the following format. [Read more about env]('https://nextjs.org/docs/basic-features/environment-variables#loading-environment-variables').
+The project requires a CKAN URL to fetch datasets. You can save them in the `.env.local` file in the following format. [Read more about env](https://nextjs.org/docs/basic-features/environment-variables#loading-environment-variables).
 
 > We can also pass a Google Analytics Id in the same file
 >
 > We also need a KEYCLOAK_URL in the env file for authentication to work
 
 ```js
-CKAN_URL = 'CKAN_URL/api/3/action'
-NEXT_PUBLIC_GOOGLE_ANALYTICS = ''
-KEYCLOAK_URL = 'http://localhost:8080'
+CKAN_URL = 'CKAN_URL/api/3/action';
+NEXT_PUBLIC_GOOGLE_ANALYTICS = '';
+KEYCLOAK_URL = 'http://localhost:8080';
 ```
 
 ### Pages
 
-- Home `/`
+[Official documentation](https://nextjs.org/docs/basic-features/pages)
+
+Directory is available at `/src/pages` and by default contains these pages:
+
+- Home `/index.tsx`
 - Datasets `/datasets`
 - Datasets Explorer `/datasets/[explorer]`
-- Organisations `/orgs`
-- Org Datasets `/orgs/[datasets]`
-- Org Explorer `/orgs/[datasets]/[explorer]`
-- About `/about`
-- Wiki Listing `/wiki`
-- Wikipage `/wiki/[wikiPage]`
 
 ### Directory Structure
 
-The component directory contains all the components required to build the platform. The components are categorized depending on their purpose. You can [read more about components](/components/README.md).
+OPub uses `/src` to store code instead of root directory. [Official documentation](https://nextjs.org/docs/advanced-features/src-directory).
 
-Each directory contains an `index.ts` file to manage Default Exports.
+It is done to keep the root level clean and make the repo more scalable. [Check out src README](/src/README.md) to learn more about the structure.
 
 ### Data fetching
 
