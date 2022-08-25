@@ -6,7 +6,6 @@ export type { VariantProps } from '@stitches/react';
 
 export const defaultTheme = createTheme('default-theme', {
   ...config.theme,
-  fonts: { primary: 'abc' },
 });
 
 export const darkTheme = createTheme('dark-theme', {
